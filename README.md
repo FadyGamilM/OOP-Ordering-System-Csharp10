@@ -16,4 +16,7 @@ we need to implement an application for the management of an inventory of ingred
 - inventory managers can add new ingredient to the stock.
 
 ### `Entities` 
-![](readme.excalidraw.png)
+![](entities.excalidraw.png)
+
+### `high-level class diagram`
+![](class-diagram.excalidraw.png)
