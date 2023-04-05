@@ -5,14 +5,34 @@ using BakeryInventorySystem.types;
 public class Ingredient
 {
    // primary key 
-   private int Id;
+   public int Id { get; private set; }
 
    // name is must, and its by default is an empty string
-   private string name = string.Empty;
+   private string name = String.Empty;
+   public string Name
+   {
+      get { return this.name; }
+      set
+      {
+         if (value.Length > 100)
+         {
+            this.name = value[..50]; // truncate to 50 chars only
+         }
+         else
+         {
+            this.name = value;
+         }
+      }
+   }
 
    // description is an optional attribute 
 
-   private string? Description;
+   private string? description;
+   public string? Description
+   {
+      get { return this.description; }
+      set { this.description = value; }
+   }
 
    // the max amount of items that can be stored in the stock from this ingredient 
    private int MaxInStock = 0;
@@ -24,7 +44,8 @@ public class Ingredient
    private StoringType StoringUnit = new StoringType { };
 
    // the current ammount of this ingredient 
-   private int CurrentAmountInStock = 0;
+   private int currentAmountInStock = 0;
+   public int CurrentAmountInStock { get { return this.currentAmountInStock; } private set { this.currentAmountInStock = value; } }
 
    // the lowest threshold in the stock
    private int LowThreshold = 10;
