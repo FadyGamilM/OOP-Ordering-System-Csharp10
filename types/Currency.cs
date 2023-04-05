@@ -1,6 +1,6 @@
 namespace BakeryInventorySystem.types;
 
-internal enum Currency
+public enum Currency
 {
     Dollar,
     Euro,

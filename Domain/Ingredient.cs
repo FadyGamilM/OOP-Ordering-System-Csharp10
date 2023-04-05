@@ -1,5 +1,5 @@
 using System.Text;
-namespace BakeryInventorySystem;
+namespace BakeryInventorySystem.Domain;
 using BakeryInventorySystem.types;
 
 public class Ingredient
@@ -25,8 +25,10 @@ public class Ingredient
       }
    }
 
-   // description is an optional attribute 
+   // the price of the ingredient
+   public Price? Price { get; set; }
 
+   // description is an optional attribute 
    private string? description;
    public string? Description
    {
