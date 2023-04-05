@@ -1,5 +1,5 @@
 using System.Text;
-namespace BakeryInventorySystem.Domain;
+namespace BakeryInventorySystem.Domain.Product;
 using BakeryInventorySystem.types;
 
 public class Ingredient
